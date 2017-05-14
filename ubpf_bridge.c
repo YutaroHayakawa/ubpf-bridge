@@ -93,7 +93,7 @@ static void *load_bpf_prog(const char *path, size_t maxlen, size_t *len) {
   return data;
 }
 
-static bool default_filter(uint8_t *buf, uint16_t len) { return false; }
+static bool default_filter(uint8_t *buf, uint16_t len) { return true; }
 
 int set_ubpf_filter(const char *prog) {
   size_t code_len;
